@@ -1,7 +1,6 @@
 module IsbnVerifier (isbn) where
 
-import Data.Char
-import Data.List.Split
+import Data.Char (isDigit, digitToInt)
 
 isbn :: String -> Bool
 isbn = checkValidIsbn . parseIsbn
