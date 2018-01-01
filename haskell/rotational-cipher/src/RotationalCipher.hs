@@ -4,7 +4,7 @@ import Data.Char
 import Data.List
 
 alphabet :: String
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = ['a'..'z']
 
 rotate :: Int -> String -> String
 rotate n text = map (encodeChar n) text
