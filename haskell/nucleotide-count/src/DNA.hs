@@ -1,6 +1,5 @@
 module DNA (nucleotideCounts) where
 
-import Control.Monad
 import Data.Map (Map, fromListWith, keysSet)
 import qualified Data.Set as S (fromList)
 
