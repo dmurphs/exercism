@@ -28,10 +28,7 @@ empty :: BST a
 empty = BST { val=Nothing, left=Nothing, right=Nothing }
 
 fromList :: Ord a => [a] -> BST a
-fromList xs = fromList' xs empty
-  where
-    fromList' [] tree     = tree
-    fromList' (a:as) tree = fromList' as $ insert a tree
+fromList = foldl (flip insert) empty
 
 insert :: Ord a => a -> BST a -> BST a
 insert x tree = case val tree of
